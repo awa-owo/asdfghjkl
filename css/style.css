@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+}
+.item1 {
+  grid-area: header;
+  height: 100vh;
+  display: flex;
+  background-color: lightblue;
+  justify-content: center;
+  align-items: center;
+  background-image: url(PC.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: green;
+  width: 100%;
+  font-size: 30px;
+  flex-direction: column;
+}
+.adMask {
+  /* position: absolute; */
+  /* text-align: center; */
+  background-color: rgba(0, 0, 0, 0.7); /*黑色半透明遮罩 */
+  color: white;
+  width: 100%;
+  height: 100%;
+  font-size: px;
+  display: flex;
+  flex-direction: column;
+}
+.item4 {
+  grid-area: Right;
+  height: 20vh;
+  display: flex;
+  background-color: grey;
+  justify-content: center;
+  align-items: center;
+  font-size: 35px;
+}
+.item4 ul {
+  display: flex;
+}
+.item4 li {
+  display: inline;
+  margin-right: 4vw;
+  border: 1px solid #555;
+  padding: 0 150px;
+  margin: 0;
+}
+.item4 a {
+  display: inline;
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+.item4:last-child {
+  border-bottom: none;
+}
+.item4 a.active {
+  background-color: #04aa6d;
+  color: white;
+}
+.item4 a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+.item3 {
+  grid-area: main;
+  height: 40vh;
+  display: flex;
+  background-color: rebeccapurple;
+  justify-content: center;
+  align-items: center;
+}
+.item5 {
+  grid-area: footer;
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  background-color: plum;
+  align-items: center;
+}
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "Right Right Right Right Right Right"
+    "header header header header header header"
+    "menu main main main main main "
+    "footer footer footer footer footer footer";
+  /* gap: 10px; */
+  background-color: white;
+  /* padding: 10px; */
+}
+.grid-container > div,
+.grid-container > div > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+  /* font-size: 30px; */
+}
+#menu {
+  background-color: black;
+}
